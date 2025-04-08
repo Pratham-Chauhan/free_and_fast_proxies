@@ -50,8 +50,8 @@ def download_free_proxies2():
         url = "{}://{}:{}".format(row['protocols'], row['ip'], row['port'])
         lis.append(url)
 
-proxies = pd.read_csv('./fast_proxies_list.csv', header=None)[0].to_list()
-# proxies = download_free_proxies()
+# proxies = pd.read_csv('./fast_proxies_list.csv', header=None)[0].to_list()
+proxies = download_free_proxies()
 
 
 def measure_proxy_speed(proxy_url):
